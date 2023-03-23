@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="i/pata-jamon.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar Manolo</title>
+  <link rel="stylesheet" href="treats.css">
+</head>
+
+<body>
+
+  <header><h1>Bar Manolo</h1></header>
+
+  <main>
+    <h2>SOBRE NOSOTROS</h2>
+    <p>Detrás de este proyecto está la familia Sánchez García propietarios del Bar Manolo, nacido en 1980.
+       Generaciones después, sigue siendo un bar-restaurante de toda la vida utilizando el mejor producto,
+      una buena cocina, un ambiente familiar y único para hacer de su estancia aquí algo inolvidable.<br/><br/>
+    Algunas de nuestras especialidades son:</p>
+
+    <ul> <!-- ul: Crear una lista NO ordenada--> 
+      <li class="img1">Tortilla de patatas</li> <!--li: crear elementos de la lista--> 
+      <img src="i/tortilla.webp" class="imagen" alt="Tortilla">
+
+      <li class="img2">Croquetillas de la casa</li>
+      <img src="i/croquetas-de-jamon-t.avif" class="imagen"  alt="Croquetillas">
+    
+      <li class="img3">Cocido Galeguiño:</li>
+      <img src="i/cocido-gallego.jpg" class="imagen"  alt="Cocido">
+    </ul>
+
+  
+  <div class="conjunto"><h2>Crear reserva:</h2>
+    <div class="div1"><form class="form1">
+        <label for="nombre">Nombre para la reserva: </label>
+        <input type="text" id="nombre" required pattern="[A-Za-z]+"
+          title="Solo son aceptadas letras mayúsculas y minúsculas">
+      </form>
+
+      <form class="form2">
+        <label class="fecha" for="fecha">Fecha:</label>
+        <input type="date" id="fecha"
+          min="2022-12-12" max="2023-10-10">
+      </form>
+      </div>
+
+      <div class="div2"><form class="form3">
+        <label for="personas">Numero de comensales: </label>
+        <input type="number" id="personas"
+          min="1" max="10" required pattern="[0-9]{1,10}"
+          title="Máximo 10 comensales por reserva">
+      </form>
+
+      <form class="form4">
+        <label name="opcion">Opción menú:</label>
+        <select name="menu" id="opcion">
+          <option>Menú del día</option> 
+          <option>Menú Vegano</option>
+          <option>Menú infantil</option>
+        </select>
+      </form>
+    </div>
+  </div>
+
+  <span class="error" id="err1"></span>
+  <span class="error" id="err2"></span>
+  <span class="error" id="err3"></span>
+  <div class="boton"><input type="submit" value="Enviar reserva" onclick="crearElemento()"></div>
+
+  </main>
+
+  <footer>
+    <p>
+     Powered by BAR MANOLO e Fillos. 
+    </p>
+    <p>
+      pubicado en <a href="https://github.com/GEI-IPM-614G01022223/2223-p_web-equipo35">GitHub</a>.
+    </p>
+  </footer>
+
+  <script src="menu.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+:root {
+    --background: rgb(129, 56, 56);
+    --background-secondary: rgb(250, 250, 250);
+    --color: rgb(0, 0, 0);
+    --fonts: ReithSans, Arial, Helvetica, freesans, sans-serif;
+    /* Group B */
+    --font-size: 20px;   
+	--line-height: 22px;
+	--trafalgar-font-size: 20px;
+	--trafalgar-line-height: 36px;
+    /* Group 2 */
+    --2SU: 8px;
+    --3SU: 12px;
+    --4SU: 16px;
+    --5SU: 20px;
+    --7SU: 32px;
+    --header-height: 56px;
+}
+
+@media (min-width: 600px) {
+    :root {
+	/* Group D */
+	--font-size: 16px;   
+	--line-height: 22px;
+	--trafalgar-font-size: 32px;
+	--trafalgar-line-height: 36px;
+    }
+}
+
+
+body {
+    font-family: var(--fonts);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    background: var(--background);
+    color: var(--color);;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body > header {
+    padding: var(--7SU) var(--4SU) var(--4SU);
+    height: 60%;
+    font-size: var(--trafalgar-font-size);
+    line-height: var(--trafalgar-line-height);
+    min-height: var(--header-height);
+    background: var(--background-secondary) no-repeat right top / auto 100% url('i/pata-jamon.jpeg');
+    border-bottom: 1px solid #dcdcdc;
+}
+
+@media (min-width: 600px) {
+    body > header {
+	height: min(392px, 16vh);
+	background: var(--background-secondary) no-repeat right top / auto 100% url('i/pata-jamon.jpeg');
+    }
+}
+
+main {
+    margin: var(--7SU) var(--4SU);
+    display: grid;
+	/*grid-template-columns: 1fr 4fr;*/
+	column-gap: 16px;
+	row-gap: 16px;
+    }
+
+main form {
+	margin-top: var(--5SU);
+    width: 80%;
+	padding:16px; 
+	border-radius:10px;
+	margin:right;
+	background-color:rgb(95, 43, 43);
+}
+
+@media (min-width: 600px) {
+    main form {
+    width:300px;
+    }
+}
+
+input:invalid{
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+}
+
+body > footer {
+    font-size: .6rem;
+    line-height: .44rem; /* .6 * 16/22 */
+    font-style: italic;
+    color: #050505;
+    text-decoration-color: #000000;
+    margin: var(--4SU);
+}
+
+
+li{
+    list-style: none;
+    clear:both;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.error{
+    text-align: center;
+}
+
+img.imagen{
+    margin-bottom: 20px;
+    text-align: center;
+    width: min(500px,80%);
+}
+
+form label{
+	width:min(80%,300px);
+	font-weight:bold;
+	display:inline-block;
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+div.conjunto{
+    display: block;
+    text-align: center;
+}
+
+div.div1{
+    display: inline-block;
+    text-align: center;
+}
+
+div.div2{
+    display: inline-block;
+    text-align: center;
+}
+
+div.boton{
+    text-align: center;
+    
+}
+
+p{
+    text-align: center;
+}
+
